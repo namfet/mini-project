@@ -1,8 +1,11 @@
-import sys
-
 def add(a, b):
     return a + b
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    a, b = sys.argv[1], sys.argv[2] # python execute param1
+if __name__ == "__main__":
+    try:
+        a = int(input("Nhập số thứ nhất: "))  # Nhập số từ bàn phím
+        b = int(input("Nhập số thứ hai: "))   # Nhập số từ bàn phím
+        result = add(a, b)
+        print("Kết quả:", result)
+    except ValueError:
+        print("Vui lòng nhập một số hợp lệ.")
